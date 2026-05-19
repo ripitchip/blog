@@ -100,8 +100,7 @@ export const messages = {
 
     'home.recentPosts': 'Latest posts',
 
-    'author.bio':
-      'Passionate about Kubernetes, I am a curious DevOps interested in different subjects.',
+    'author.bio': 'DevOps, K8s, server management, security, networking, and maker stuff.',
 
     'footer.poweredBy': 'Powered by',
     'footer.theme': 'Theme',
@@ -203,7 +202,7 @@ export const messages = {
     'home.recentPosts': 'Articles récents',
 
     'author.bio':
-      "Passionné de Kubernetes, je suis un DevOps curieux et je m'intéresse à différents sujets.",
+      "Bonjour ! Je suis Thomas. Bienvenue dans mon jardin numérique où je partage mon parcours à travers le DevOps, Kubernetes (K8s), la gestion de serveurs, la sécurité et le réseau. J'adore déployer des services et le monde des makers.",
 
     'footer.poweredBy': 'Propulsé par',
     'footer.theme': 'Thème',
