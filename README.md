@@ -1057,7 +1057,7 @@ Edit the keydown handler at the bottom of
 
 ### Replace the avatar
 
-Drop a new file at `src/assets/images/site/avatar.svg` and keep
+Drop a new file at `src/assets/images/site/avatar.png` and keep
 `SITE.author.avatar` as the imported asset object in `src/config.ts`.
 
 If you need a fixed public URL or external CDN URL, `SITE.author.avatar`

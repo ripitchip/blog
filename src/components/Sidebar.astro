@@ -72,11 +72,7 @@ const navItems = NAV.map((item) => ({
         {SITE.title}
       </span>
     </a>
-    {
-      SITE.author.bio && (
-        <p class="text-base-content/70 mt-1 max-w-56 text-sm italic">{SITE.author.bio}</p>
-      )
-    }
+    <p class="text-base-content/70 mt-1 max-w-56 text-sm italic">{t('author.bio' as UIKey)}</p>
   </header>
 
   {/* Vertical nav */}

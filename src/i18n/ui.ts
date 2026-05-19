@@ -100,6 +100,8 @@ export const messages = {
 
     'home.recentPosts': 'Latest posts',
 
+    'author.bio': 'Passionate about Kubernetes, I am a curious DevOps interested in different subjects.',
+
     'footer.poweredBy': 'Powered by',
     'footer.theme': 'Theme',
     'footer.privacy': 'Privacy Policy',
@@ -198,6 +200,8 @@ export const messages = {
     '404.cta': 'Retour à l\u2019accueil',
 
     'home.recentPosts': 'Articles récents',
+
+    'author.bio': "Passionné de Kubernetes, je suis un DevOps curieux et je m'intéresse à différents sujets.",
 
     'footer.poweredBy': 'Propulsé par',
     'footer.theme': 'Thème',
