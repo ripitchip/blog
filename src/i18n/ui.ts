@@ -100,7 +100,8 @@ export const messages = {
 
     'home.recentPosts': 'Latest posts',
 
-    'author.bio': 'Passionate about Kubernetes, I am a curious DevOps interested in different subjects.',
+    'author.bio':
+      'Passionate about Kubernetes, I am a curious DevOps interested in different subjects.',
 
     'footer.poweredBy': 'Powered by',
     'footer.theme': 'Theme',
@@ -201,7 +202,8 @@ export const messages = {
 
     'home.recentPosts': 'Articles récents',
 
-    'author.bio': "Passionné de Kubernetes, je suis un DevOps curieux et je m'intéresse à différents sujets.",
+    'author.bio':
+      "Passionné de Kubernetes, je suis un DevOps curieux et je m'intéresse à différents sujets.",
 
     'footer.poweredBy': 'Propulsé par',
     'footer.theme': 'Thème',
