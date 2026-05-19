@@ -2,6 +2,10 @@
 FROM oven/bun:1.1-slim AS builder
 WORKDIR /app
 
+# Label de versionnage
+ARG VERSION=latest
+LABEL org.opencontainers.image.version=$VERSION
+
 # Installation des dépendances
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
