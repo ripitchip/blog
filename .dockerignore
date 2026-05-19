@@ -1,0 +1,8 @@
+.git
+node_modules
+dist
+.astro
+.pagefind
+.ci-changed.txt
+.ci-eslint.txt
+.ci-prettier.txt

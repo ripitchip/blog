@@ -1,0 +1,52 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import PostList from '~/components/PostList.astro';
+import { SITE } from '~/config';
+import { localizedPath, useTranslations } from '~/i18n/utils';
+import { getPosts } from '~/utils/posts';
+
+export function getStaticPaths() {
+  return SITE.locales.map((l) => ({
+    params: { locale: l === SITE.defaultLocale ? undefined : l },
+    props: { locale: l },
+  }));
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const posts = await getPosts(locale);
+// Show only the 4 most recent posts on the home page
+const pagePosts = posts.slice(0, 4);
+---
+
+<BaseLayout title={SITE.title} description={SITE.description} pathWithoutLocale="/">
+  <section class="mb-16 border-b border-base-300 pb-12 pt-8">
+    <h1 class="mb-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      {SITE.title}
+    </h1>
+    <p class="text-base-content/80 mb-8 max-w-2xl text-lg leading-relaxed lg:text-xl">
+      {SITE.description}
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={localizedPath('/blog', locale)} class="btn btn-primary px-8">
+        {t('nav.posts')}
+      </a>
+      <a href={localizedPath('/about', locale)} class="btn btn-ghost px-8">
+        {t('nav.about')}
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="mb-8 flex items-end justify-between">
+      <h2 class="text-2xl font-bold tracking-tight">{t('home.recentPosts')}</h2>
+      <a
+        href={localizedPath('/blog', locale)}
+        class="text-primary hover:text-primary-focus font-semibold transition-colors"
+      >
+        {t('list.allPosts')} &rarr;
+      </a>
+    </div>
+    <PostList posts={pagePosts} locale={locale} />
+  </section>
+</BaseLayout>
