@@ -20,6 +20,7 @@ This project aims to be a community-driven Astro theme: approachable for first-t
 
    **Option B: Manual setup**
    Ensure you have Bun installed (>= 1.1.0), then run:
+
    ```bash
    bun install
    ```

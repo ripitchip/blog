@@ -119,9 +119,11 @@ cd my-blog
 ### 2. Install
 
 #### Option A: DevContainer (Recommended for VS Code)
+
 If you use VS Code, you can skip the manual installation. Open the project and click **"Reopen in Container"** when prompted. It comes with Bun and all recommended extensions pre-installed.
 
 #### Option B: Manual Installation
+
 ```bash
 bun install
 ```

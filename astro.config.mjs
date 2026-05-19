@@ -1,5 +1,6 @@
 // @ts-check
-import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config';
+import { defineConfig } from 'astro/config';
+import { fontProviders, svgoOptimizer } from 'astro/config';
 import process from 'node:process';
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -114,6 +115,7 @@ export default defineConfig({
   server: {
     host: true,
   },
+  // @ts-expect-error - preview is a valid Astro config option, but may cause type errors in some Astro 6.x versions
   preview: {
     host: true,
   },
