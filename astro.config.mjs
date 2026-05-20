@@ -223,12 +223,9 @@ export default defineConfig({
     // markers, diffs, word wrap, collapsible sections.
     // https://expressive-code.com/
     expressiveCode({
-      themes: ['github-light', 'github-dark-dimmed'],
-      // Bind the active theme to our `<html data-theme>` attribute instead
-      // of the default `prefers-color-scheme` media query so the theme
-      // toggle in the sidebar takes effect immediately.
-      themeCssSelector: (theme) =>
-        `[data-theme='${theme.type === 'dark' ? 'chirpy-dark' : 'chirpy-light'}']`,
+      themes: ['github-dark-dimmed'],
+      // Since we forced chirpy-dark, we always use the dark code theme.
+      themeCssSelector: () => "[data-theme='chirpy-dark']",
       useDarkModeMediaQuery: false,
       shiki: {
         langAlias: {

@@ -8,7 +8,7 @@ import Panel from '../components/Panel.astro';
 import SEO from '../components/SEO.astro';
 import BackToTop from '../components/islands/BackToTop.astro';
 import { ClientRouter } from 'astro:transitions';
-import faviconImg from '../assets/images/site/favicon.svg';
+import faviconImg from '../assets/images/site/ripitchip.png';
 import { SITE, type Locale } from '../config';
 import { detectLocale, htmlLang, useTranslations, stripLocale, withBase } from '../i18n/utils';
 import { buildSeo, type SeoMeta } from '../utils/seo';
@@ -77,14 +77,13 @@ const meta: SeoMeta =
 ---
 
 <!doctype html>
-<html lang={lang} data-theme="chirpy-light">
+<html lang={lang} data-theme="chirpy-dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f8" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e" />
-    <link rel="icon" type="image/svg+xml" href={withBase(faviconImg.src)} />
+    <meta name="theme-color" content="#1b1b1e" />
+    <link rel="icon" type="image/png" href={withBase(faviconImg.src)} />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -99,23 +98,13 @@ const meta: SeoMeta =
     />
     <SEO meta={meta} />
     <ClientRouter />
-    {/* Apply persisted theme as early as possible to avoid FOUC. */}
+    {/* Apply dark theme as early as possible. */}
     <script is:inline>
       (function () {
         function applyTheme() {
-          try {
-            var stored = localStorage.getItem('theme');
-            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            var valid = stored === 'chirpy-dark' || stored === 'chirpy-light';
-            var theme = valid ? stored : prefersDark ? 'chirpy-dark' : 'chirpy-light';
-            if (!valid && stored) localStorage.setItem('theme', theme);
-            document.documentElement.setAttribute('data-theme', theme);
-          } catch {
-            /* ignore */
-          }
+          document.documentElement.setAttribute('data-theme', 'chirpy-dark');
         }
         applyTheme();
-        // Re-apply after view transitions swap in a fresh <html data-theme>.
         document.addEventListener('astro:after-swap', applyTheme);
       })();
     </script>
@@ -161,5 +150,11 @@ const meta: SeoMeta =
     </div>
 
     <BackToTop />
+
+    {/* Tailwind v4 Safelist for dynamically generated alert classes */}
+    <div
+      class="hidden alert alert-info alert-success alert-warning alert-error alert-soft alert-outline alert-dash alert-vertical alert-horizontal sm:alert-horizontal"
+    >
+    </div>
   </body>
 </html>

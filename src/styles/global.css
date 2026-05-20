@@ -16,7 +16,7 @@
 /* ---------- Chirpy LIGHT ---------- */
 @plugin 'daisyui/theme' {
   name: 'chirpy-light';
-  default: true;
+  default: false;
   prefersdark: false;
   color-scheme: light;
 
@@ -64,7 +64,7 @@
 /* ---------- Chirpy DARK ---------- */
 @plugin 'daisyui/theme' {
   name: 'chirpy-dark';
-  default: false;
+  default: true;
   prefersdark: true;
   color-scheme: dark;
 
@@ -563,6 +563,16 @@
     @apply mt-4;
   }
 }
+
+/* 
+  Tailwind v4 Scanner Safelist
+  The classes below are generated dynamically by src/plugins/remark-alert.ts.
+  We list them here so the Tailwind scanner picks them up and includes them in the bundle.
+
+  alert alert-info alert-success alert-warning alert-error
+  alert-soft alert-outline alert-dash
+  alert-vertical alert-horizontal sm:alert-horizontal
+*/
 
 /* ---------- Expressive Code -----------------------------
  * Code blocks are rendered by `astro-expressive-code`. It emits its own
