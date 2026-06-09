@@ -202,7 +202,7 @@ export const messages = {
     'home.recentPosts': 'Articles récents',
 
     'author.bio':
-      "Bonjour ! Je suis Thomas. Bienvenue dans mon jardin numérique où je partage mon parcours à travers le DevOps, Kubernetes (K8s), la gestion de serveurs, la sécurité et le réseau. J'adore déployer des services et le monde des makers.",
+      "Bonjour ! Je suis Thomas 👋. Bienvenue dans mon jardin numérique où je partage mon parcours à travers le DevOps, Kubernetes (K8s), la gestion de serveurs, la sécurité et le réseau. J'adore déployer des services et le monde des makers.",
 
     'footer.poweredBy': 'Propulsé par',
     'footer.theme': 'Thème',

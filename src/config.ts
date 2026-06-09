@@ -52,7 +52,7 @@ export const SITE: SiteConfig = {
   title: "Thomas's Blog",
   /** Site tagline / description. */
   description:
-    "Hello! I'm Thomas. Welcome to my digital garden where I share my journey through DevOps, Kubernetes (K8s), server management, security, and networking. I love deploying services and the maker world.",
+    "Hello! I'm Thomas 👋. Welcome to my digital garden where I share my journey through DevOps, Kubernetes (K8s), server management, security, and networking. I love deploying services and the maker world.",
   /** Author/handle shown in footer + meta. */
   author: {
     name: 'Thomas',
