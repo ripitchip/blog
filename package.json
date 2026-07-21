@@ -40,7 +40,7 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.3.1",
-    "astro-expressive-code": "^0.42.0",
+    "astro-expressive-code": "^0.44.1",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {
